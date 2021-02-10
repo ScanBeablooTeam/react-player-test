@@ -21,11 +21,11 @@ function App() {
         </ul>
 
         <Switch>
-          <Route path='/scan'>
+          <Route path={`([a-zA-Z]/{0,15}[a-zA-Z0-9]{0,22}/)scan`}>
             <Company text='Scan Computers' image={ scan_logo } />
           </Route>
 
-          <Route path='/beabloo'>
+          <Route path='([a-zA-Z]/{0,15}[a-zA-Z0-9]{0,22}/)beabloo'>
             <Company text='Beabloo' image={ beabloo_logo } />
           </Route>
         </Switch>
