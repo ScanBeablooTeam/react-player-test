@@ -1,0 +1,44 @@
+body {
+  background: #f1f1f1;
+}
+
+.App {
+  
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  min-width: 100vw;
+  align-items: center;
+  flex-direction: column;
+
+  .nav {
+    
+    background: #1b1b1d;
+    width: 100%;
+    text-align: center;
+
+    ul {
+      color: #ffffff;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+      
+        p {
+          color: #ffffff;
+          text-decoration: none;
+          padding: 20px;
+        }
+      }
+    }
+  }
+
+}
+
+.flex-grid {
+  flex: 1;
+  display: flex;
+  width: 100%;
+}

@@ -1,3 +1,5 @@
+import './Company.scss';
+
 function Company (props) {
 
   return (

@@ -1,0 +1,15 @@
+.company {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    display: block;
+  }
+
+  p {
+    display: block;
+  }
+}

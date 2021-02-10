@@ -1,6 +1,6 @@
 import scan_logo from './scan.png';
 import beabloo_logo from './beabloo.png';
-import './App.css';
+import './App.scss';
 import { 
   BrowserRouter as Router,
   Link,
@@ -10,24 +10,30 @@ import {
 import { Company } from './components';
 
 function App() {
+
+  const devEnv = process.env.NODE_ENV === 'development' ? '/' : '(/[a-zA-Z]{0,15}/[a-zA-Z0-9]{0,22}/)';
+
   return (
     <Router>
       <div className='App'>
 
-        <p>choose an option</p>
-        <ul>
-          <li><Link to='scan' >Scan Computers</Link></li>
-          <li><Link to='beabloo' >Beabloo</Link></li>
-        </ul>
+        <div className='nav'>
+          <ul>
+            <Link to='scan' ><li><p>Scan Computers</p></li></Link>
+            <Link to='beabloo' ><li><p>Beabloo</p></li></Link>
+          </ul>
+        </div>
 
         <Switch>
-          <Route path={`(/[a-zA-Z]{0,15}/[a-zA-Z0-9]{0,22}/)scan`}>
-            <Company text='Scan Computers' image={ scan_logo } />
-          </Route>
+          <div className='flex-grid'>
+            <Route path={`${ devEnv }scan`}> 
+              <Company text='Scan Computers' image={ scan_logo } />
+            </Route>
 
-          <Route path='(/[a-zA-Z]{0,15}/[a-zA-Z0-9]{0,22}/)beabloo'>
-            <Company text='Beabloo' image={ beabloo_logo } />
-          </Route>
+            <Route path={`${ devEnv }beabloo`}> 
+              <Company text='Beabloo' image={ beabloo_logo } />
+            </Route>
+          </div>
         </Switch>
 
       </div>
