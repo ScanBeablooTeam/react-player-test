@@ -11,27 +11,30 @@ import { Company } from './components';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
+    // <Router>
+    //   <div className="App">
 
-        <div className='test'>
-          <ul>
-            <li><Link to='/scan'>Scan</Link></li>
-            <li><Link to='/beabloo'>Beabloo</Link></li>
-          </ul>
-        </div>
+    //     <div className='test'>
+    //       <ul>
+    //         <li><Link to='/scan'>Scan</Link></li>
+    //         <li><Link to='/beabloo'>Beabloo</Link></li>
+    //       </ul>
+    //     </div>
 
-        <Switch>
-          <Route path='/scan'>
-            <Company text={'Scan Computers'} image={ scan_logo } />
-          </Route>
-          <Route path='/beabloo'>
-            <Company text={'Beabloo'} image={ beabloo_logo } />
-          </Route>
-        </Switch>
+    //     <Switch>
+    //       <Route path='/scan'>
+    //         <Company text={'Scan Computers'} image={ scan_logo } />
+    //       </Route>
+    //       <Route path='/beabloo'>
+    //         <Company text={'Beabloo'} image={ beabloo_logo } />
+    //       </Route>
+    //     </Switch>
 
-      </div>
-    </Router>
+    //   </div>
+    // </Router>
+    <div className='App' >
+      <p>test app</p>
+    </div>
   );
 }
 
