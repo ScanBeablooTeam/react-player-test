@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import scan_logo from './scan.png';
+import beabloo_logo from './beabloo.png';
 import './App.css';
+import { 
+  BrowserRouter as Router,
+  Link,
+  Route,
+  Switch
+} from 'react-router-dom';
+import { Company } from './components';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>This is Applcation 03</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+
+        <div className='test'>
+          <ul>
+            <li><Link to='/scan'>Scan</Link></li>
+            <li><Link to='/beabloo'>Beabloo</Link></li>
+          </ul>
+        </div>
+
+        <Switch>
+          <Route path='/scan'>
+            <Company text={'Scan Computers'} image={ scan_logo } />
+          </Route>
+          <Route path='/beabloo'>
+            <Company text={'Beabloo'} image={ beabloo_logo } />
+          </Route>
+        </Switch>
+
+      </div>
+    </Router>
   );
 }
 
